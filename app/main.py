@@ -1,5 +1,4 @@
-from flask import Flask, jsonify
-from flask import abort
+from flask import Flask, jsonify, abort
 
 app = Flask(__name__)
 
@@ -41,6 +40,5 @@ def get_upc(upc):
         else:
             abort(404)
 
-
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(host='0.0.0.0', debug=True, port=80)
