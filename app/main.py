@@ -4,7 +4,7 @@ app = Flask(__name__)
 
 upcs = [
     {
-        'upc': '012345678905',
+        'upc': '0012345678905',
         'title': u'Sample UPC',
         'description': u'This is a sample UPC',
         'imageUrl': u'https://www.upccode.net/sample_codes/UPC%20Code%20sample.jpg',
