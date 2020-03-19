@@ -1,6 +1,8 @@
 from flask import Flask, jsonify, abort
+from flask_cors import CORS, cross_origin
 
 app = Flask(__name__)
+CORS(app)
 
 upcs = [
     {
@@ -27,11 +29,13 @@ upcs = [
 
 
 @app.route('/upc', methods=['GET'])
+@cross_origin()
 def get_upcs():
     return jsonify(upcs)
 
 
 @app.route('/upc/<string:upc>', methods=['GET'])
+@cross_origin()
 def get_upc(upc):
     for x in upcs:
         if x['upc'] == upc:
